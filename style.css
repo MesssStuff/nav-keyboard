@@ -1,0 +1,76 @@
+body {
+  background: url(./bg.jpg) no-repeat center;
+  background-size: cover;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+main > div:nth-child(2) {
+  margin-left: -30px;
+}
+
+main > div:nth-child(3) {
+  margin-left: -100px;
+}
+
+main > div > kbd {
+  background-image: linear-gradient(to bottom, #1f1f1f 0%, #111111 100%);
+  border: 1px #202020 solid;
+  box-shadow: 0 0 0 1px #1a1b1c, 0 0 0 2px #1f2020, 0 3px 0 2px #080808;
+  border-radius: 8px;
+  margin: 10px;
+  width: 55px;
+  height: 45px;
+  display: inline-block;
+  position: relative;
+}
+
+kbd > button {
+  cursor: pointer;
+  position: absolute;
+  top: 3px;
+  right: 6px;
+  padding: 0;
+  font-size: 8px;
+  text-align: center;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  vertical-align: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: 200ms ease-in-out;
+}
+
+kbd > img {
+  width: 14px;
+  height: 14px;
+  position: absolute;
+  left: 6px;
+  bottom: 2px;
+}
+
+kbd > .text {
+  font-family: Helvetica, sans-serif;
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.8);
+  position: absolute;
+  left: 6px;
+  top: 2px;
+  text-transform: uppercase;
+}
+
+kbd:hover > button {
+  visibility: visible;
+  opacity: 1;
+  transition: 350ms ease-in-out;
+}
